@@ -12,7 +12,7 @@ public class BinaryTreeService {
 	private BinaryTree root;
 	
 	/**
-	 * Esse método insere o valor que representa um deterninado No
+	 * Esse metodo insere o valor que representa um deterninado No
 	 * @param valor
 	 * 			O valor dado ao No
 	 */
@@ -27,13 +27,13 @@ public class BinaryTreeService {
 	}
 
 	/**
-	 * Essa classe decide em qual lado será criado o próximo nó com base no nó raiz
+	 * Essa classe decide em qual lado sera criado o próximo nó com base no No raiz
 	 * 	
 	 *
 	 * @param root
 	 * 			O No que esta sendo processado
 	 * @param no
-	 * 			O no que fara parte do nó que esta sendo processado
+	 * 			O No que fara parte do No que esta sendo processado
 	 */
 	private void inserirBinary(BinaryTree root, BinaryTree no) {
 		if(root.getValor() < no.getValor()){
@@ -52,14 +52,41 @@ public class BinaryTreeService {
 		
 	}
 	
-	
+
 	/**
-	 * 
+	 * Esse metodo recupera um No a partir do seu valor
+	 * @param valor
+	 * 			O valor contido no No
 	 * @return
-	 * 		Retorna o nó criado
+	 * 		Um BinaryTree ou null caso não encontre um valor valido
 	 */
-	public BinaryTree getBinaryTree(){		
-		return root;
+	public BinaryTree geBinaryTree(int valor){
+		return getBinaryTree(root,valor);
+	}
+
+	/**
+	 * Esse método varre a Arvore Binaria procurando o valor passado como parametro
+	 * @param root
+	 * 			O no onde devera ser procurado
+	 * @param valor
+	 * 			O valor contido no No
+	 * @return
+	 * 		Um BinaryTree ou null caso não encontre um valor valido
+	 */
+	private BinaryTree getBinaryTree(BinaryTree root, int valor) {
+		
+		if(root != null){
+			if(root.getValor() == valor){
+				return root;
+			}else{
+				if(root.getValor() < valor){
+					return getBinaryTree(root.getRight(), valor);
+				}else{
+					return getBinaryTree(root.getLeft(), valor);
+				}
+			}
+		}
+		return null;
 	}
 		
 		

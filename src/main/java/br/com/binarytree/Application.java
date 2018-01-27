@@ -19,8 +19,10 @@ public class Application {
 		serviceBinary.inserirBinary(26);
 		serviceBinary.inserirBinary(36);
 		
+		BinaryTree geBinaryTree = serviceBinary.geBinaryTree(30);
 		
-		System.out.println(soma(serviceBinary.getBinaryTree()));
+		//System.out.println(soma(serviceBinary.getBinaryTree()));
+		System.out.println(soma(geBinaryTree));
 	}
 	
 	
