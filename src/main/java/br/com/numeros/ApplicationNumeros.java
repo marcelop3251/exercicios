@@ -11,9 +11,7 @@ public class ApplicationNumeros {
 	}
 
 	private static int criarNumero(int numberA, int numberB) {
-
 		if (numberA != 0 && numberB != 0) {
-
 			String numeroA = String.valueOf(numberA);
 			String numeroB = String.valueOf(numberB);
 			String c = "";

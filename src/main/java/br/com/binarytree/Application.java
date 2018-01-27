@@ -8,15 +8,6 @@ public class Application {
 	
 	public static void main(String[] args) {
 		
-		/*						 25
-		 * 					   /    \
-		 * 					  20     30
-		 * 					 /  \      \
-		 * 					15  12      40
-		 * 							   /  \
-		 * 							  26   36
-		 */
-		
 		BinaryTreeService serviceBinary = new BinaryTreeService();
 		
 		serviceBinary.inserirBinary(25);

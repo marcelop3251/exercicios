@@ -1,5 +1,10 @@
 package br.com.binarytree.entity;
 
+/**
+ * Essa classe representa uma Arvore Binária
+ * @author Marcelo
+ *
+ */
 public class BinaryTree {
 	
 	private int valor;
